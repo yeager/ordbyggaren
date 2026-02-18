@@ -1,0 +1,70 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-18 10:19+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/ordbyggaren/window.py:14
+msgid "Easy"
+msgstr ""
+
+#: src/ordbyggaren/window.py:18
+msgid "Medium"
+msgstr ""
+
+#: src/ordbyggaren/window.py:22
+msgid "Hard"
+msgstr ""
+
+#: src/ordbyggaren/window.py:32 src/ordbyggaren/main.py:46
+msgid "Ordbyggaren"
+msgstr ""
+
+#: src/ordbyggaren/window.py:50
+msgid "Toggle dark/light theme"
+msgstr ""
+
+#: src/ordbyggaren/window.py:55
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: src/ordbyggaren/window.py:56
+msgid "About Ordbyggaren"
+msgstr ""
+
+#: src/ordbyggaren/window.py:57
+msgid "Quit"
+msgstr ""
+
+#: src/ordbyggaren/window.py:111
+msgid "Listen"
+msgstr ""
+
+#: src/ordbyggaren/window.py:129
+msgid "Clear"
+msgstr ""
+
+#: src/ordbyggaren/window.py:134
+msgid "Skip"
+msgstr ""
+
+#: src/ordbyggaren/window.py:220
+msgid "Correct!"
+msgstr ""
+
+#: src/ordbyggaren/window.py:223
+msgid "Try again!"
+msgstr ""

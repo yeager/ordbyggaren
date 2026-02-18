@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Ordbyggaren
+Name[sv]=Ordbyggaren
+Comment=Phonological training app - build words from sounds and letters
+Comment[sv]=Fonologisk träning med ljud och bokstäver
+Exec=ordbyggaren
+Icon=ordbyggaren
+Terminal=false
+Type=Application
+Categories=Education;Accessibility;

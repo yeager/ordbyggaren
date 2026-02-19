@@ -1,12 +1,27 @@
 # Ordbyggaren
 
-Phonological training app - build words from sounds and letters.
+Phonological training app — build words from sounds and letters.
+
+> **Målgrupp / Target audience:** Barn med språkstörning (DLD), autism, dyslexi och
+> andra inlärningssvårigheter som behöver träna fonologisk medvetenhet — att koppla
+> ljud till bokstäver och bygga ord. Även användbart för barn i förskola/lågstadium
+> och nyanlända som lär sig svenska.
+>
+> **For:** Children with developmental language disorder (DLD), autism spectrum
+> disorder (ASD), dyslexia, and other learning difficulties who need phonological
+> awareness training — connecting sounds to letters and building words. Also useful
+> for preschool/primary school children and newcomers learning Swedish.
 
 ![Screenshot](screenshots/screenshot.png)
 
 ## Features
 
-Syllables, sounds→letters mapping, drag letters to correct position, adjustable difficulty (easy/medium/hard), TTS for pronunciation. Swedish word lists.
+- Syllable and sound-to-letter mapping exercises
+- Drag letters to correct positions to build words
+- Adjustable difficulty (easy/medium/hard)
+- TTS pronunciation support
+- Swedish word lists
+- Dark/light theme toggle
 
 ## Requirements
 

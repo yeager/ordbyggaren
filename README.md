@@ -1,57 +1,57 @@
 # Ordbyggaren
 
-Phonological training app — build words from sounds and letters.
+[![Version](https://img.shields.io/badge/version-0.1.0-blue)](https://github.com/yeager/ordbyggaren/releases)
+[![License: GPL-3.0](https://img.shields.io/badge/License-GPL%203.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Transifex](https://img.shields.io/badge/Transifex-Translate-green.svg)](https://www.transifex.com/danielnylander/ordbyggaren/)
 
-> **Målgrupp / Target audience:** Barn med språkstörning (DLD), autism, dyslexi och
-> andra inlärningssvårigheter som behöver träna fonologisk medvetenhet — att koppla
-> ljud till bokstäver och bygga ord. Även användbart för barn i förskola/lågstadium
-> och nyanlända som lär sig svenska.
->
-> **For:** Children with developmental language disorder (DLD), autism spectrum
-> disorder (ASD), dyslexia, and other learning difficulties who need phonological
-> awareness training — connecting sounds to letters and building words. Also useful
-> for preschool/primary school children and newcomers learning Swedish.
+Phonological training app — build words from sounds and letters — GTK4/Adwaita.
 
-![Screenshot](screenshots/screenshot.png)
+> **For:** Children with developmental language disorder (DLD), autism, or dyslexia. Phonological awareness training through interactive word building.
+
+![Screenshot](screenshots/main.png)
 
 ## Features
 
-- Syllable and sound-to-letter mapping exercises
-- Drag letters to correct positions to build words
-- Adjustable difficulty (easy/medium/hard)
-- TTS pronunciation support
-- Swedish word lists
-- Dark/light theme toggle
-
-## Requirements
-
-- Python 3.10+
-- GTK4 / libadwaita
-- PyGObject
+- **Word building** — drag letters and sounds to form words
+- **Phoneme support** — individual sound segments
+- **Progressive difficulty** — from simple to complex words
+- **Visual feedback** — immediate right/wrong indication
+- **Word categories** — animals, food, objects
+- **Dark/light theme** toggle
 
 ## Installation
 
+### Debian/Ubuntu
+
 ```bash
-# Install dependencies (Fedora/RHEL)
-sudo dnf install python3-gobject gtk4 libadwaita
-
-# Install dependencies (Debian/Ubuntu)
-sudo apt install python3-gi gir1.2-gtk-4.0 gir1.2-adw-1
-
-# Run from source
-PYTHONPATH=src python3 -c "from ordbyggaren.main import main; main()"
+echo "deb [signed-by=/usr/share/keyrings/yeager-keyring.gpg] https://yeager.github.io/debian-repo stable main" | sudo tee /etc/apt/sources.list.d/yeager.list
+curl -fsSL https://yeager.github.io/debian-repo/yeager-keyring.gpg | sudo tee /usr/share/keyrings/yeager-keyring.gpg > /dev/null
+sudo apt update && sudo apt install ordbyggaren
 ```
+
+### Fedora/openSUSE
+
+```bash
+sudo dnf config-manager --add-repo https://yeager.github.io/rpm-repo/yeager.repo
+sudo dnf install ordbyggaren
+```
+
+### From source
+
+```bash
+git clone https://github.com/yeager/ordbyggaren.git
+cd ordbyggaren && pip install -e .
+ordbyggaren
+```
+
+## Translation
+
+Help translate on [Transifex](https://www.transifex.com/danielnylander/ordbyggaren/).
 
 ## License
 
-GPL-3.0-or-later
+GPL-3.0-or-later — see [LICENSE](LICENSE) for details.
 
 ## Author
 
-Daniel Nylander
-
-## Links
-
-- [GitHub](https://github.com/yeager/ordbyggaren)
-- [Issues](https://github.com/yeager/ordbyggaren/issues)
-- [Translations](https://app.transifex.com/danielnylander/ordbyggaren)
+**Daniel Nylander** — [danielnylander.se](https://danielnylander.se)

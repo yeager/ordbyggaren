@@ -1,5 +1,12 @@
 # Ordbyggaren
 
+
+## Screenshots
+
+| English | Svenska |
+|---------|---------|
+| ![English](screenshots/ordbyggaren_en.png) | ![Svenska](screenshots/ordbyggaren_sv.png) |
+
 [![Version](https://img.shields.io/badge/version-0.1.0-blue)](https://github.com/yeager/ordbyggaren/releases)
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL%203.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Transifex](https://img.shields.io/badge/Transifex-Translate-green.svg)](https://www.transifex.com/danielnylander/ordbyggaren/)

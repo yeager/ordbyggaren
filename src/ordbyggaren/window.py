@@ -29,7 +29,7 @@ WORDS = {
 class OrdbyggarenWindow(Adw.ApplicationWindow):
     def __init__(self, **kwargs):
         super().__init__(**kwargs, default_width=500, default_height=650,
-                         title=_("Ordbyggaren"))
+                         title=_("Word Builder"))
         self.difficulty = list(WORDS.keys())[0]
         self.current_word = ""
         self.current_emoji = ""
@@ -53,7 +53,7 @@ class OrdbyggarenWindow(Adw.ApplicationWindow):
 
         menu = Gio.Menu()
         menu.append(_("Keyboard Shortcuts"), "app.shortcuts")
-        menu.append(_("About Ordbyggaren"), "app.about")
+        menu.append(_("About Word Builder"), "app.about")
         menu.append(_("Quit"), "app.quit")
         menu_btn = Gtk.MenuButton(icon_name="open-menu-symbolic", menu_model=menu)
         header.pack_end(menu_btn)

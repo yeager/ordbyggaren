@@ -1,13 +1,19 @@
 """Main window for Ordbyggaren - Phonological training."""
+import json
 import random
 import subprocess
 import gettext
+from datetime import datetime
+from pathlib import Path
+
 import gi
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
-from gi.repository import Gtk, Adw, Gio, GLib
+from gi.repository import Gtk, Adw, Gio, GLib, Gdk
 
 _ = gettext.gettext
+
+from ordbyggaren.export import show_export_dialog
 
 # Word lists by difficulty
 WORDS = {
@@ -35,7 +41,9 @@ class OrdbyggarenWindow(Adw.ApplicationWindow):
         self.current_emoji = ""
         self.score = 0
         self.attempts = 0
+        self.results = self._load_results()
         self._build_ui()
+        self._setup_shortcuts()
         self._new_word()
         self._start_clock()
 
@@ -51,12 +59,22 @@ class OrdbyggarenWindow(Adw.ApplicationWindow):
         theme_btn.connect("clicked", self._toggle_theme)
         header.pack_end(theme_btn)
 
+        export_btn = Gtk.Button(icon_name="document-save-symbolic",
+                                tooltip_text=_("Export results (Ctrl+E)"))
+        export_btn.connect("clicked", self._on_export)
+        header.pack_end(export_btn)
+
         menu = Gio.Menu()
+        menu.append(_("Export Results"), "win.export")
         menu.append(_("Keyboard Shortcuts"), "app.shortcuts")
         menu.append(_("About Word Builder"), "app.about")
         menu.append(_("Quit"), "app.quit")
         menu_btn = Gtk.MenuButton(icon_name="open-menu-symbolic", menu_model=menu)
         header.pack_end(menu_btn)
+
+        export_action = Gio.SimpleAction.new("export", None)
+        export_action.connect("activate", self._on_export)
+        self.add_action(export_action)
 
         # Score
         self.score_label = Gtk.Label(label="⭐ 0")
@@ -214,13 +232,16 @@ class OrdbyggarenWindow(Adw.ApplicationWindow):
         if len(self.typed_letters) == len(self.current_word):
             attempt = "".join(self.typed_letters).lower()
             self.attempts += 1
-            if attempt == self.current_word:
+            correct = attempt == self.current_word
+            if correct:
                 self.score += 1
                 self.score_label.set_label(f"⭐ {self.score}")
                 self.feedback_label.set_label("🎉 " + _("Correct!") + " 🎉")
+                self._log_result(self.current_word, correct=True)
                 GLib.timeout_add(1500, self._new_word)
             else:
                 self.feedback_label.set_label("❌ " + _("Try again!"))
+                self._log_result(self.current_word, correct=False)
                 GLib.timeout_add(1000, self._on_clear)
 
     def _on_clear(self, *_):
@@ -241,6 +262,51 @@ class OrdbyggarenWindow(Adw.ApplicationWindow):
         if btn.get_active():
             self.difficulty = diff
             self._new_word()
+
+    def _setup_shortcuts(self):
+        ctrl = Gtk.EventControllerKey()
+        ctrl.connect("key-pressed", self._on_key)
+        self.add_controller(ctrl)
+
+    def _on_key(self, ctrl, keyval, keycode, state):
+        if state & Gdk.ModifierType.CONTROL_MASK:
+            if keyval == Gdk.KEY_e or keyval == Gdk.KEY_E:
+                self._on_export()
+                return True
+        return False
+
+    def _results_path(self):
+        p = Path(GLib.get_user_config_dir()) / "ordbyggaren"
+        p.mkdir(parents=True, exist_ok=True)
+        return p / "results.json"
+
+    def _load_results(self):
+        path = self._results_path()
+        if path.exists():
+            try:
+                return json.loads(path.read_text())
+            except Exception:
+                pass
+        return []
+
+    def _save_results(self):
+        self._results_path().write_text(
+            json.dumps(self.results, indent=2, ensure_ascii=False))
+
+    def _log_result(self, word, correct):
+        self.results.append({
+            "word": word,
+            "difficulty": self.difficulty,
+            "correct": correct,
+            "attempts": self.attempts,
+            "date": datetime.now().strftime("%Y-%m-%d %H:%M"),
+        })
+        self.results = self.results[-500:]
+        self._save_results()
+
+    def _on_export(self, *args):
+        show_export_dialog(self, self.results, self.score,
+                          lambda msg: self.status_label.set_label(msg))
 
     def _toggle_theme(self, btn):
         mgr = Adw.StyleManager.get_default()

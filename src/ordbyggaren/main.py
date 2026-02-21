@@ -43,7 +43,7 @@ class OrdbyggarenApp(Adw.Application):
 
     def _on_about(self, *_):
         about = Adw.AboutDialog(
-            application_name=_("Ordbyggaren"),
+            application_name=_("Word Builder"),
             application_icon="ordbyggaren",
             version=__version__,
             developer_name="Daniel Nylander",

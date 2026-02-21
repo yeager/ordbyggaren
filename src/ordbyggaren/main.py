@@ -7,6 +7,7 @@ gi.require_version('Adw', '1')
 from gi.repository import Gtk, Adw, Gio, GLib
 from ordbyggaren import __version__
 from ordbyggaren.window import OrdbyggarenWindow
+from ordbyggaren.accessibility import apply_large_text
 
 TEXTDOMAIN = "ordbyggaren"
 gettext.textdomain(TEXTDOMAIN)
@@ -19,6 +20,7 @@ class OrdbyggarenApp(Adw.Application):
                          flags=Gio.ApplicationFlags.DEFAULT_FLAGS)
 
     def do_activate(self):
+        apply_large_text()
         win = self.props.active_window or OrdbyggarenWindow(application=self)
         win.present()
 

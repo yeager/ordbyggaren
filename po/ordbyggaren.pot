@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-21 20:53+0100\n"
+"POT-Creation-Date: 2026-02-22 06:01+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,154 +17,177 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/export.py:13 src/main.py:48 src/window.py:38
+#: src/ordbyggaren/window.py:20
+msgid "Easy"
+msgstr ""
+
+#: src/ordbyggaren/window.py:24
+msgid "Medium"
+msgstr ""
+
+#: src/ordbyggaren/window.py:28
+msgid "Hard"
+msgstr ""
+
+#: src/ordbyggaren/window.py:38 src/ordbyggaren/export.py:13
+#: src/ordbyggaren/main.py:72
 msgid "Word Builder"
 msgstr ""
 
-#: src/export.py:27 src/export.py:85
+#: src/ordbyggaren/window.py:58
+msgid "Toggle dark/light theme"
+msgstr ""
+
+#: src/ordbyggaren/window.py:63
+msgid "Export results (Ctrl+E)"
+msgstr ""
+
+#: src/ordbyggaren/window.py:68
+msgid "Export Results"
+msgstr ""
+
+#: src/ordbyggaren/window.py:69
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: src/ordbyggaren/window.py:70
+msgid "About Word Builder"
+msgstr ""
+
+#: src/ordbyggaren/window.py:71
+msgid "Quit"
+msgstr ""
+
+#: src/ordbyggaren/window.py:129
+msgid "Listen"
+msgstr ""
+
+#: src/ordbyggaren/window.py:147
+msgid "Clear"
+msgstr ""
+
+#: src/ordbyggaren/window.py:152
+msgid "Skip"
+msgstr ""
+
+#: src/ordbyggaren/window.py:239
+msgid "Correct!"
+msgstr ""
+
+#: src/ordbyggaren/window.py:243
+msgid "Try again!"
+msgstr ""
+
+#: src/ordbyggaren/export.py:27 src/ordbyggaren/export.py:85
 msgid "Word"
 msgstr ""
 
-#: src/export.py:27 src/export.py:87
+#: src/ordbyggaren/export.py:27 src/ordbyggaren/export.py:87
 msgid "Difficulty"
 msgstr ""
 
-#: src/export.py:27 src/export.py:89
+#: src/ordbyggaren/export.py:27 src/ordbyggaren/export.py:89
 msgid "Correct"
 msgstr ""
 
-#: src/export.py:27 src/export.py:91
+#: src/ordbyggaren/export.py:27 src/ordbyggaren/export.py:91
 msgid "Attempts"
 msgstr ""
 
-#: src/export.py:27
+#: src/ordbyggaren/export.py:27
 msgid "Date"
 msgstr ""
 
-#: src/export.py:32
+#: src/ordbyggaren/export.py:32
 msgid "Yes"
 msgstr ""
 
-#: src/export.py:32
+#: src/ordbyggaren/export.py:32
 msgid "No"
 msgstr ""
 
-#: src/export.py:37
+#: src/ordbyggaren/export.py:37
 #, python-format
 msgid "Total score: %d"
 msgstr ""
 
-#: src/export.py:70
+#: src/ordbyggaren/export.py:70
 msgid "Training Results"
 msgstr ""
 
-#: src/export.py:74
+#: src/ordbyggaren/export.py:74
 #, python-format
 msgid "Score: %d ⭐"
 msgstr ""
 
-#: src/export.py:136
+#: src/ordbyggaren/export.py:136
 msgid "Export Training Results"
 msgstr ""
 
-#: src/export.py:137
+#: src/ordbyggaren/export.py:137
 msgid "Choose export format:"
 msgstr ""
 
-#: src/export.py:140
+#: src/ordbyggaren/export.py:140
 msgid "Cancel"
 msgstr ""
 
-#: src/export.py:141
+#: src/ordbyggaren/export.py:141
 msgid "CSV"
 msgstr ""
 
-#: src/export.py:142
+#: src/ordbyggaren/export.py:142
 msgid "JSON"
 msgstr ""
 
-#: src/export.py:143
+#: src/ordbyggaren/export.py:143
 msgid "PDF"
 msgstr ""
 
-#: src/export.py:164
+#: src/ordbyggaren/export.py:164
 msgid "Save Export"
 msgstr ""
 
-#: src/export.py:178
+#: src/ordbyggaren/export.py:178
 #, python-format
 msgid "Exported %s"
 msgstr ""
 
-#: src/export.py:181 src/export.py:204
+#: src/ordbyggaren/export.py:181 src/ordbyggaren/export.py:204
 #, python-format
 msgid "Export error: %s"
 msgstr ""
 
-#: src/export.py:186
+#: src/ordbyggaren/export.py:186
 msgid "Save PDF"
 msgstr ""
 
-#: src/export.py:199
+#: src/ordbyggaren/export.py:199
 msgid "PDF exported"
 msgstr ""
 
-#: src/export.py:201
+#: src/ordbyggaren/export.py:201
 msgid "PDF export requires cairo."
 msgstr ""
 
-#: src/window.py:20
-msgid "Easy"
+#: src/ordbyggaren/main.py:117
+msgid "Welcome"
 msgstr ""
 
-#: src/window.py:24
-msgid "Medium"
+#: src/ordbyggaren/main.py:123
+msgid "Welcome to Word Builder"
 msgstr ""
 
-#: src/window.py:28
-msgid "Hard"
+#: src/ordbyggaren/main.py:125
+msgid ""
+"Build words with letter tiles — a fun way to practice spelling.\n"
+"\n"
+"✓ Drag and drop letter tiles\n"
+"✓ Multiple difficulty levels\n"
+"✓ Visual feedback and encouragement\n"
+"✓ Swedish and English word lists"
 msgstr ""
 
-#: src/window.py:58
-msgid "Toggle dark/light theme"
-msgstr ""
-
-#: src/window.py:63
-msgid "Export results (Ctrl+E)"
-msgstr ""
-
-#: src/window.py:68
-msgid "Export Results"
-msgstr ""
-
-#: src/window.py:69
-msgid "Keyboard Shortcuts"
-msgstr ""
-
-#: src/window.py:70
-msgid "About Word Builder"
-msgstr ""
-
-#: src/window.py:71
-msgid "Quit"
-msgstr ""
-
-#: src/window.py:129
-msgid "Listen"
-msgstr ""
-
-#: src/window.py:147
-msgid "Clear"
-msgstr ""
-
-#: src/window.py:152
-msgid "Skip"
-msgstr ""
-
-#: src/window.py:239
-msgid "Correct!"
-msgstr ""
-
-#: src/window.py:243
-msgid "Try again!"
+#: src/ordbyggaren/main.py:128
+msgid "Get Started"
 msgstr ""

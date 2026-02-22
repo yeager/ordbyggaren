@@ -15,8 +15,6 @@ TEXTDOMAIN = "ordbyggaren"
 gettext.textdomain(TEXTDOMAIN)
 _ = gettext.gettext
 
-
-
 def _settings_path():
     xdg = os.environ.get("XDG_CONFIG_HOME", os.path.expanduser("~/.config"))
     d = os.path.join(xdg, "ordbyggaren")
@@ -48,7 +46,6 @@ class OrdbyggarenApp(Adw.Application):
         if not self.settings.get("welcome_shown"):
             self._show_welcome(win)
 
-
     def do_startup(self):
         Adw.Application.do_startup(self)
         self._setup_actions()
@@ -76,11 +73,12 @@ class OrdbyggarenApp(Adw.Application):
             developer_name="Daniel Nylander",
             website="https://github.com/yeager/ordbyggaren",
             issue_url="https://github.com/yeager/ordbyggaren/issues",
-            translate_url="https://app.transifex.com/danielnylander/ordbyggaren",
             license_type=Gtk.License.GPL_3_0,
             developers=["Daniel Nylander"],
             copyright="© 2026 Daniel Nylander",
         )
+        about.add_link(_("Help translate"), "https://app.transifex.com/danielnylander/ordbyggaren")
+
         about.present(self.props.active_window)
 
     def _on_shortcuts(self, *_args):
@@ -105,7 +103,6 @@ class OrdbyggarenApp(Adw.Application):
         win = builder.get_object("shortcuts")
         win.set_transient_for(self.props.active_window)
         win.present()
-
 
 def main():
     app = OrdbyggarenApp()
@@ -146,8 +143,6 @@ def main():
         _save_settings(self.settings)
         dialog.close()
 
-
-
 # --- Session restore ---
 import json as _json
 import os as _os
@@ -174,7 +169,6 @@ def _restore_session(window, app_name):
     except (FileNotFoundError, _json.JSONDecodeError, OSError):
         pass
 
-
 # --- Fullscreen toggle (F11) ---
 def _setup_fullscreen(window, app):
     """Add F11 fullscreen toggle."""
@@ -186,7 +180,6 @@ def _setup_fullscreen(window, app):
         ))
         app.add_action(action)
         app.set_accels_for_action('app.toggle-fullscreen', ['F11'])
-
 
 # --- Plugin system ---
 import importlib.util
@@ -209,7 +202,6 @@ def _load_plugins(app_name):
             except Exception as e:
                 print(f"Plugin {fname}: {e}")
     return plugins
-
 
 # --- Sound notifications ---
 def _play_sound(sound_name='complete'):

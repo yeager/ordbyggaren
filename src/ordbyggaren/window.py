@@ -244,7 +244,7 @@ class OrdbyggarenWindow(Adw.ApplicationWindow):
                 self._log_result(self.current_word, correct=False)
                 GLib.timeout_add(1000, self._on_clear)
 
-    def _on_clear(self, *_):
+    def _on_clear(self, *_args):
         self.typed_letters = []
         self.feedback_label.set_label("")
         self._update_answer()

@@ -67,7 +67,7 @@ class OrdbyggarenApp(Adw.Application):
         self.add_action(shortcuts_action)
         self.set_accels_for_action("app.shortcuts", ["<Control>slash"])
 
-    def _on_about(self, *_):
+    def _on_about(self, *_args):
         about = Adw.AboutDialog(
             application_name=_("Word Builder"),
             application_icon="ordbyggaren",
@@ -82,7 +82,7 @@ class OrdbyggarenApp(Adw.Application):
         )
         about.present(self.props.active_window)
 
-    def _on_shortcuts(self, *_):
+    def _on_shortcuts(self, *_args):
         builder = Gtk.Builder()
         builder.add_from_string('''
         <interface>

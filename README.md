@@ -1,64 +1,29 @@
 # Ordbyggaren
 
+Fonologisk träning — bygg ord av ljud och bokstäver.
 
-## Screenshots
+GTK4/Adwaita · Python · v0.2.3 · 41 översättningsbara strängar
 
-| English | Svenska |
-|---------|---------|
-| ![English](screenshots/ordbyggaren_en.png) | ![Svenska](screenshots/ordbyggaren_sv.png) |
-
-[![Version](https://img.shields.io/badge/version-0.1.0-blue)](https://github.com/yeager/ordbyggaren/releases)
-[![License: GPL-3.0](https://img.shields.io/badge/License-GPL%203.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Transifex](https://img.shields.io/badge/Transifex-Translate-green.svg)](https://www.transifex.com/danielnylander/ordbyggaren/)
-
-Phonological training app — build words from sounds and letters — GTK4/Adwaita.
-
-> **For:** Children with developmental language disorder (DLD), autism, or dyslexia. Phonological awareness training through interactive word building.
-
-![Screenshot](screenshots/main.png)
-
-## Features
-
-- **Word building** — drag letters and sounds to form words
-- **Phoneme support** — individual sound segments
-- **Progressive difficulty** — from simple to complex words
-- **Visual feedback** — immediate right/wrong indication
-- **Word categories** — animals, food, objects
-- **Dark/light theme** toggle
+Del av [Autismappar](https://autismappar.se) — fria verktyg för barn med autism, språkstörning och ADHD.
 
 ## Installation
 
-### Debian/Ubuntu
-
+### Ubuntu / Debian
 ```bash
-echo "deb [signed-by=/usr/share/keyrings/yeager-keyring.gpg] https://yeager.github.io/debian-repo stable main" | sudo tee /etc/apt/sources.list.d/yeager.list
-curl -fsSL https://yeager.github.io/debian-repo/yeager-keyring.gpg | sudo tee /usr/share/keyrings/yeager-keyring.gpg > /dev/null
-sudo apt update && sudo apt install ordbyggaren
+sudo apt install ordbyggaren
 ```
+Repo: [yeager/debian-repo](https://github.com/yeager/debian-repo)
 
-### Fedora/openSUSE
-
+### Fedora
 ```bash
-sudo dnf config-manager --add-repo https://yeager.github.io/rpm-repo/yeager.repo
 sudo dnf install ordbyggaren
 ```
+Repo: [yeager/rpm-repo](https://github.com/yeager/rpm-repo)
 
-### From source
+## Översättning
 
-```bash
-git clone https://github.com/yeager/ordbyggaren.git
-cd ordbyggaren && pip install -e .
-ordbyggaren
-```
+Översätts via [Transifex](https://app.transifex.com/danielnylander/ordbyggaren/). 11 språk.
 
-## Translation
+## Licens
 
-Help translate on [Transifex](https://www.transifex.com/danielnylander/ordbyggaren/).
-
-## License
-
-GPL-3.0-or-later — see [LICENSE](LICENSE) for details.
-
-## Author
-
-**Daniel Nylander** — [danielnylander.se](https://danielnylander.se)
+GPL-3.0-or-later · Daniel Nylander <daniel@danielnylander.se>

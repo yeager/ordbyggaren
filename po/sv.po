@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the ordbyggaren package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: ordbyggaren\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-22 06:01+0100\n"
+"POT-Creation-Date: 2026-02-23 11:03+0100\n"
 "PO-Revision-Date: 2026-02-18 09:21+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/danielnylander/teams/304960/sv/)\n"
@@ -21,66 +21,10 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/ordbyggaren/window.py:20
-msgid "Easy"
-msgstr "Lätt"
-
-#: src/ordbyggaren/window.py:24
-msgid "Medium"
-msgstr "Medel"
-
-#: src/ordbyggaren/window.py:28
-msgid "Hard"
-msgstr "Svår"
-
-#: src/ordbyggaren/window.py:38 src/ordbyggaren/export.py:13
-#: src/ordbyggaren/main.py:72
+#: src/ordbyggaren/export.py:13 src/ordbyggaren/main.py:70
+#: src/ordbyggaren/window.py:38
 msgid "Word Builder"
 msgstr "Ordbyggaren"
-
-#: src/ordbyggaren/window.py:58
-msgid "Toggle dark/light theme"
-msgstr "Växla mörkt/ljust tema"
-
-#: src/ordbyggaren/window.py:63
-msgid "Export results (Ctrl+E)"
-msgstr "Exportera resultat (Ctrl+E)"
-
-#: src/ordbyggaren/window.py:68
-msgid "Export Results"
-msgstr "Exportera resultat"
-
-#: src/ordbyggaren/window.py:69
-msgid "Keyboard Shortcuts"
-msgstr "Tangentbordsgenvägar"
-
-#: src/ordbyggaren/window.py:70
-msgid "About Word Builder"
-msgstr "Om Ordbyggaren"
-
-#: src/ordbyggaren/window.py:71
-msgid "Quit"
-msgstr "Avsluta"
-
-#: src/ordbyggaren/window.py:129
-msgid "Listen"
-msgstr "Lyssna"
-
-#: src/ordbyggaren/window.py:147
-msgid "Clear"
-msgstr "Töm"
-
-#: src/ordbyggaren/window.py:152
-msgid "Skip"
-msgstr "Hoppa över"
-
-#: src/ordbyggaren/window.py:239
-msgid "Correct!"
-msgstr "Rätt!"
-
-#: src/ordbyggaren/window.py:243
-msgid "Try again!"
-msgstr "Försök igen!"
 
 #: src/ordbyggaren/export.py:27 src/ordbyggaren/export.py:85
 msgid "Word"
@@ -174,15 +118,19 @@ msgstr "PDF exporterad"
 msgid "PDF export requires cairo."
 msgstr "PDF-export kräver cairo."
 
-#: src/ordbyggaren/main.py:117
+#: src/ordbyggaren/main.py:80
+msgid "Thanks to"
+msgstr "Tack till"
+
+#: src/ordbyggaren/main.py:120
 msgid "Welcome"
 msgstr "Välkommen"
 
-#: src/ordbyggaren/main.py:123
+#: src/ordbyggaren/main.py:126
 msgid "Welcome to Word Builder"
 msgstr "Välkommen till Ordbyggaren"
 
-#: src/ordbyggaren/main.py:125
+#: src/ordbyggaren/main.py:128
 msgid ""
 "Build words with letter tiles — a fun way to practice spelling.\n"
 "\n"
@@ -198,6 +146,62 @@ msgstr ""
 "✓ Visuell återkoppling och uppmuntran\n"
 "✓ Svenska och engelska ordlistor"
 
-#: src/ordbyggaren/main.py:128
+#: src/ordbyggaren/main.py:131
 msgid "Get Started"
 msgstr "Kom igång"
+
+#: src/ordbyggaren/window.py:20
+msgid "Easy"
+msgstr "Lätt"
+
+#: src/ordbyggaren/window.py:24
+msgid "Medium"
+msgstr "Medel"
+
+#: src/ordbyggaren/window.py:28
+msgid "Hard"
+msgstr "Svår"
+
+#: src/ordbyggaren/window.py:58
+msgid "Toggle dark/light theme"
+msgstr "Växla mörkt/ljust tema"
+
+#: src/ordbyggaren/window.py:63
+msgid "Export results (Ctrl+E)"
+msgstr "Exportera resultat (Ctrl+E)"
+
+#: src/ordbyggaren/window.py:68
+msgid "Export Results"
+msgstr "Exportera resultat"
+
+#: src/ordbyggaren/window.py:69
+msgid "Keyboard Shortcuts"
+msgstr "Tangentbordsgenvägar"
+
+#: src/ordbyggaren/window.py:70
+msgid "About Word Builder"
+msgstr "Om Ordbyggaren"
+
+#: src/ordbyggaren/window.py:71
+msgid "Quit"
+msgstr "Avsluta"
+
+#: src/ordbyggaren/window.py:129
+msgid "Listen"
+msgstr "Lyssna"
+
+#: src/ordbyggaren/window.py:147
+msgid "Clear"
+msgstr "Töm"
+
+#: src/ordbyggaren/window.py:152
+msgid "Skip"
+msgstr "Hoppa över"
+
+#: src/ordbyggaren/window.py:239
+msgid "Correct!"
+msgstr "Rätt!"
+
+#: src/ordbyggaren/window.py:243
+msgid "Try again!"
+msgstr "Försök igen!"

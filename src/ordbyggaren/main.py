@@ -37,6 +37,7 @@ def _save_settings(s):
 class OrdbyggarenApp(Adw.Application):
     def __init__(self):
         super().__init__(application_id="se.yeager.ordbyggaren",
+        GLib.set_application_name(_("Word Builder"))
                          flags=Gio.ApplicationFlags.DEFAULT_FLAGS)
 
     def do_activate(self):
